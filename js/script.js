@@ -1,15 +1,9 @@
-const button = document.querySelector("#goButton");
+import { UserInterface } from "./classes/userinterface";
+import { GameEngine } from "./classes/GameEngine";
 
-button.addEventListener("click", function() {
-    alert("The game button has been clicked, let's start the game!");
+document.addEventListener("DOMContentLoaded", () => {
+    const ui = new UserInterface();
+    const boardContainer = document.getElementById("game-board");
+    const engine = new GameEngine();
+    engine.init();
 })
-
-// import { AppController } from "./classes/AppController.js";
-// import { GameEngine } from "./classes/GameEngine.js";
-// import { UserInterface } from "./classes/UserInterface.js";
-
-// const ui = new UserInterface();
-// const game = new GameEngine(ui);
-// const app = new AppController(ui, game);
-
-// app.start();
