@@ -12,24 +12,28 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="app-header">
         <h1>Memory Button Game</h1>
     </header>
 
     <main>
-        <div id="app"></div>
-        <!-- <div>
-            <p>How many buttons to create?</p> 
-            <label for="">Enter a number between 3-7:</label> 
-            <input type="text">
-            <button id="goButton">Go</button> 
+        <main class="app-main">
+            <section id="setup-panel" class="setup-panel" aria-label="Game setup controls">
+                <!-- UIManager injects the label, input, and Go button here -->
+            </section>
         
-            <div id="game"></div>
-        </div> -->
+            <section id="game-board" class="game-board" aria-label="Game board" role="region">
+                <!-- GameBoard injects MemoryButton elements here -->
+            </section>
+        
+            <section id="status-panel" class="status-panel" role="status" aria-live="polite">
+                <!-- UIManager injects win/lose/error messages here -->
+            </section>
+        </main>
     </main>
     
     <footer>
-        <p>- Anthony H.</p> <!-- Make sure to put this into lang\messages\en\strings.js-->
+        <p>- Anthony H.</p>
     </footer>
 </body>
 </html>
