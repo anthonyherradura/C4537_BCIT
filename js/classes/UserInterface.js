@@ -1,4 +1,6 @@
-class UserInterface {
+import { STRINGS } from "../lang/messages/en/strings.js"
+
+export class UserInterface {
      constructor(rootElementId) {
         this.root = document.getElementById(rootElementId);
         this.header = null;
@@ -7,6 +9,10 @@ class UserInterface {
         this.inputBox = null;
         this.goButton = null;
         this.statusMessage = null;
+     }
+
+     renderPage() {
+
      }
      
 }

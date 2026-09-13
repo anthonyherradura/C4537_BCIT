@@ -1,4 +1,4 @@
-export class FormValidator {
+export class MemoryButton {
     constructor() {
         
     }
