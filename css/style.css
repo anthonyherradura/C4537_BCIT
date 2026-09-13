@@ -1,11 +1,14 @@
 body {
     font-family: 'JetBrains Mono', monospace;
+    margin: 0%;
 }
-header {
-    height: 100px;
+.app-header {
+    text-align: center;
     padding: 20px;
     background-color: #576CA8;
 }
 h1 {
     color: azure;
 }
+
+@media (min-width: 768px){}
