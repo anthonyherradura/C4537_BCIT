@@ -1,9 +1,9 @@
-import { UserInterface } from "./classes/userinterface";
-import { GameEngine } from "./classes/GameEngine";
+import { UserInterface } from "./classes/UserInterface.js"
+import { GameController } from "./classes/GameController.js"
 
 document.addEventListener("DOMContentLoaded", () => {
-    const ui = new UserInterface();
+    const ui = new UserInterface("setup-panel", "status-panel");
     const boardContainer = document.getElementById("game-board");
-    const engine = new GameEngine();
-    engine.init();
+    const controller = new GameController(ui, boardContainer);
+    controller.init();
 })

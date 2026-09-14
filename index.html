@@ -9,13 +9,11 @@
     <link href="https://googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <script type="module" src="js/script.js"></script>
 </head>
 <body>
     <header class="app-header">
-        <section id="header-text">
-            <!-- Header text goes here -->
-        </section>
+        <h1 id="header-text"></h1>
     </header>
 
     <main>
@@ -23,21 +21,19 @@
             <section id="setup-panel" class="setup-panel" aria-label="Game setup controls">
                 <!-- UIManager injects the label, input, and Go button here -->
             </section>
+
+            <section id="status-panel" class="status-panel" role="status" aria-live="polite">
+                <!-- UIManager injects win/lose/error messages here -->
+            </section>
         
             <section id="game-board" class="game-board" aria-label="Game board" role="region">
                 <!-- GameBoard injects MemoryButton elements here -->
-            </section>
-        
-            <section id="status-panel" class="status-panel" role="status" aria-live="polite">
-                <!-- UIManager injects win/lose/error messages here -->
             </section>
         </main>
     </main>
     
     <footer>
-        <section id="footer-text">
-            <!-- Footer text goes here -->
-        </section>
+        <section id="footer-text"></section>
     </footer>
 </body>
 </html>
