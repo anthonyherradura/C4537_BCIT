@@ -1,3 +1,7 @@
+/**
+ * Built with development assistance from Claude.
+ */
+
 import { MemoryButton } from "./MemoryButton.js"
 
 export class GameBoard {

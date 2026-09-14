@@ -1,3 +1,7 @@
+/**
+ * Built with development assistance from Claude.
+ */
+
 import { STRINGS } from "../../lang/messages/en/strings.js";
 
 
@@ -17,7 +21,7 @@ export class UserInterface {
      }
 
      renderSetupForm(onGoClicked) {
-          this.renderHeaderFooter() // Load the headings
+          this.renderHeaderFooter()
 
           this.setupPanel.innerHTML = "";
 

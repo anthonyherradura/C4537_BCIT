@@ -1,3 +1,7 @@
+/**
+ * Built with development assistance from Claude.
+ */
+
 export class MemoryButton {
   constructor(order, color) {
     this.order = order;

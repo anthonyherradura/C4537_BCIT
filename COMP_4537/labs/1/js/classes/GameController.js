@@ -1,3 +1,7 @@
+/**
+ * Built with development assistance from Claude.
+ */
+
 import { STRINGS } from "../../lang/messages/en/strings.js";
 import { GameBoard } from "./GameBoard.js";
 
