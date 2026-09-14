@@ -1,4 +1,4 @@
-import { STRINGS } from "../lang/messages/en/strings.js";
+import { STRINGS } from "../../lang/messages/en/strings.js";
 
 
 export class UserInterface {
@@ -9,21 +9,21 @@ export class UserInterface {
      }
 
 
-     // renderHeaderFooter() {
-     //      const pageHeaderText = document.getElementById("header-text");
-     //      const pageFooter = document.getElementById("footer-text");
-     //      pageHeaderText.innerHTML = `<h1>${STRINGS.GAME_TITLE}</h1>`;
-     //      pageFooter.innerHTML = STRINGS.PAGE_FOOTER_TEXT;
-     // }
+     renderHeaderFooter() {
+          const pageHeader = document.getElementById("header-text");
+          const pageFooter = document.getElementById("footer-text");
+          pageHeader.innerHTML = `<h1>${STRINGS.GAME_TITLE}</h1>`;
+          pageFooter.innerHTML = `<p>${STRINGS.NAME}</p>`;
+     }
 
-     renderSetupForm() {
-          // this.renderHeaderFooter() // Load the headings
+     renderSetupForm(onGoClicked) {
+          this.renderHeaderFooter() // Load the headings
 
           this.setupPanel.innerHTML = "";
 
           const label = document.createElement("label");
           label.setAttribute("for", "button-count-input");
-          label.textContent = STRINGS.PROMPT_NUM_BUTTONS;
+          label.textContent = STRINGS.BTNS_CREATE_LABEL;
 
           const input = document.createElement("input");
           input.type = "number";
@@ -33,7 +33,7 @@ export class UserInterface {
 
           const goButton = document.createElement("button");
           goButton.type = "button";
-          goButton.textContent = STRINGS.BTN_GO;
+          goButton.textContent = STRINGS.GO_BTN_TEXT;
 
           goButton.addEventListener("click", () => {
                onGoClicked(input.value);

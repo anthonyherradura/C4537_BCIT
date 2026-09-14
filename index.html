@@ -1,5 +1,6 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,29 +12,29 @@
     <link rel="stylesheet" href="css/style.css">
     <script type="module" src="js/script.js"></script>
 </head>
+
 <body>
     <header class="app-header">
         <h1 id="header-text"></h1>
     </header>
 
-    <main>
-        <main class="app-main">
-            <section id="setup-panel" class="setup-panel" aria-label="Game setup controls">
-                <!-- UIManager injects the label, input, and Go button here -->
-            </section>
+    <main class="app-main">
+        <section id="setup-panel" class="setup-panel" aria-label="Game setup controls">
+            <!-- UIManager injects the label, input, and Go button here -->
+        </section>
 
-            <section id="status-panel" class="status-panel" role="status" aria-live="polite">
-                <!-- UIManager injects win/lose/error messages here -->
-            </section>
-        
-            <section id="game-board" class="game-board" aria-label="Game board" role="region">
-                <!-- GameBoard injects MemoryButton elements here -->
-            </section>
-        </main>
+        <section id="status-panel" class="status-panel" role="status" aria-live="polite">
+            <!-- UIManager injects win/lose/error messages here -->
+        </section>
+
+        <section id="game-board" class="game-board" aria-label="Game board" role="region">
+            <!-- GameBoard injects MemoryButton elements here -->
+        </section>
     </main>
-    
-    <footer>
+
+    <footer class="app-footer">
         <section id="footer-text"></section>
     </footer>
 </body>
+
 </html>

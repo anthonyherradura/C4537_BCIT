@@ -1,9 +1,8 @@
-import { STRINGS } from "../lang/messages/en/user.js";
+import { STRINGS } from "../../lang/messages/en/strings.js";
 import { GameBoard } from "./GameBoard.js";
 
 const MAX_BUTTONS = 7;
 const MIN_BUTTONS = 3;
-let scramble_interval_ms = null;
 
 const GameState = Object.freeze({
     IDLE: "IDLE",
@@ -38,7 +37,7 @@ export class GameController {
 
     validateInput(numInput) {
         const num = Number(numInput);
-        if (!Number.isInteger(num) || num < 3 || n > 7) {
+        if (!Number.isInteger(num) || num < MIN_BUTTONS || num > MAX_BUTTONS) {
             return null;
         } else {
             return num;
@@ -77,6 +76,7 @@ export class GameController {
     beginRecallPhase() {
         this.board.hideAllLabels();
         this.state = GameState.AWAITING_CLICKS;
+        this.ui.showStatus(STRINGS.PROCEED_TEXT);
         this.board.enableClicks((button) => this.handleButtonClicked(button));
     }
 

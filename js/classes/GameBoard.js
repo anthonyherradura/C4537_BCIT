@@ -1,4 +1,4 @@
-import { MemoryButton } from "./MemoryButton.js";
+import { MemoryButton } from "./MemoryButton.js"
 
 export class GameBoard {
     constructor(containerElement) {

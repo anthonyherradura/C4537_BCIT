@@ -1,5 +1,3 @@
-
-
 export class MemoryButton {
   constructor(order, color) {
     this.order = order;

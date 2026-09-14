@@ -6,9 +6,5 @@ export const STRINGS = Object.freeze({
     PROCEED_TEXT: "Now click the original order",
     MSG_EXCELLENT: "Excellent Memory!",
     MSG_WRONG_ORDER: "Wrong Order!",
-    PAGE_FOOTER: `
-    <p>Anthony Herradura</p>
-    <p>Lab 1</p>
-    <p>COMP 4537</p>
-    `
+    NAME: "Anthony Herradura"
 });
