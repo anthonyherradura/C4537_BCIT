@@ -1,5 +1,6 @@
-import { STRINGS } from "../lang/messages/en/user.js"
-
+/**
+ * Made with assistance of Claude AI agent.
+ */
 document.addEventListener("DOMContentLoaded", () => {
     const placeHolder = document.getElementById("navbar-placeholder");
     if (!placeHolder) return;
