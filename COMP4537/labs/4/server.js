@@ -15,7 +15,7 @@ const server = http.createServer(async function (req, res) {
         res.writeHead(200, {
             "Content-Type": "text/html"
         });
-        res.end(message.replace("%1", name) + getDate());
+        return res.end(message.replace("%1", name) + getDate());
     }
     res.writeHead(404, { "Content-Type": "text/plain" });
     res.end("Not found");
