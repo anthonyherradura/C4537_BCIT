@@ -1,6 +1,6 @@
 const http = require("http");
 const { getDate, getJsonData } = require("./modules/utils.js")
-const PORT = 8888;
+const PORT = process.env.PORT || 8888;
 
 const server = http.createServer(async function (req, res) {
     const message = await getJsonData();
