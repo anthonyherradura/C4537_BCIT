@@ -5,9 +5,10 @@ const PORT = process.env.PORT || 8888;
 const server = http.createServer(async function (req, res) {
     const fullUrlString = `http://${req.headers.host}${req.url}`;
     const parsedUrl = new URL(fullUrlString);
+    const pathname = parsedUrl.pathname.replace(/\/$/, "");
     
 
-    if (req.method == "GET" && req.url == `/COMP4537/labs/4/getDate`) {
+    if (req.method === "GET" && pathname === `/COMP4537/labs/4/getDate`) {
         const name = parsedUrl.searchParams.get("name");
         const message = await getJsonData();
         console.log(name);
