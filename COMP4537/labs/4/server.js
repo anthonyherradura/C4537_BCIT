@@ -8,12 +8,14 @@ const server = http.createServer(async function (req, res) {
     const parsedUrl = new URL(fullUrlString);
     const name = parsedUrl.searchParams.get("name");
 
-    if (req.method == "GET" && req.url == `/getDate/?name=${name}`) {
+    if (req.method == "GET" && req.url == `COMP4537/labs/4/getDate/?name=${name}`) {
         res.writeHead(200, {
             "Content-Type": "text/html"
         });
         res.end(message.replace("%1", name) + getDate());
     }
+    res.writeHead(404, { "Content-Type": "text/plain" });
+    res.end("Not found");
 })
 
 server.listen(PORT, () => {
