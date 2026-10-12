@@ -6,9 +6,10 @@ const server = http.createServer(async function (req, res) {
     const message = await getJsonData();
     const fullUrlString = `http://${req.headers.host}${req.url}`;
     const parsedUrl = new URL(fullUrlString);
-    const name = parsedUrl.searchParams.get("name");
+    
 
-    if (req.method == "GET" && req.url == `COMP4537/labs/4/getDate/?name=${name}`) {
+    if (req.method == "GET" && req.url == `COMP4537/labs/4/getDate`) {
+        const name = parsedUrl.searchParams.get("name");
         res.writeHead(200, {
             "Content-Type": "text/html"
         });
