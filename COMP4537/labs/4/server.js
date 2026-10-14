@@ -1,5 +1,7 @@
 const http = require("http");
 const { getDate, getJsonData } = require("./modules/utils.js")
+const enData = require("./lang/en/en.json");
+const serverMessage = enData.runningServer;
 const PORT = 8888;
 
 const server = http.createServer(async function (req, res) {
@@ -22,9 +24,9 @@ const server = http.createServer(async function (req, res) {
         return res.end(`<p style="color: blue;">${message.replace("%1", name) + getDate()}</p>`);
     }
     res.writeHead(404, { "Content-Type": "text/plain" });
-    res.end("Not found (type /COMP4537/labs/4/getDate/?name={any value here} as the URL parameters)");
+    res.end(enData.errorMsg);
 })
 
 server.listen(PORT, () => {
-    console.log("The server is running on http://localhost:" + PORT);
+    console.log(serverMessage + PORT);
 });

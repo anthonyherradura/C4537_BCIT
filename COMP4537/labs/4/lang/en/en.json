@@ -1,3 +1,5 @@
 {
-    "userMsg": "Hello %1, What a beautiful day. Server current date and time is "
+    "userMsg": "Hello %1, What a beautiful day. Server current date and time is ",
+    "errorMsg": "Not found (type /COMP4537/labs/4/getDate/?name={any value here} as the URL parameters)",
+    "runningServer": "The server is running on http://localhost:"
 }
