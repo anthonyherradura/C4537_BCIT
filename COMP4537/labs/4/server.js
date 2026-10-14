@@ -2,7 +2,7 @@ const http = require("http");
 const { getDate, getJsonData } = require("./modules/utils.js")
 const enData = require("./lang/en/en.json");
 const serverMessage = enData.runningServer;
-const PORT = 8888;
+const PORT = process.env.PORT || 8888;
 
 const server = http.createServer(async function (req, res) {
     const fullUrlString = `http://${req.headers.host}${req.url}`;
