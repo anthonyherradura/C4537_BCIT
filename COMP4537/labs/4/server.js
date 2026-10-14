@@ -25,6 +25,6 @@ const server = http.createServer(async function (req, res) {
     res.end("Not found (type /COMP4537/labs/4/getDate/?name={any value here} as the URL parameters)");
 })
 
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
     console.log("The server is running on http://localhost:" + PORT);
 });
