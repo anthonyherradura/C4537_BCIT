@@ -1,6 +1,7 @@
 const http = require("http");
 const { getDate, getJsonData } = require("./modules/utils.js")
 const PORT = process.env.PORT || 8888;
+const HOST = "0.0.0.0"
 
 const server = http.createServer(async function (req, res) {
     const fullUrlString = `http://${req.headers.host}${req.url}`;
@@ -25,6 +26,6 @@ const server = http.createServer(async function (req, res) {
     res.end("Not found (type /COMP4537/labs/4/getDate/?name={any value here} as the URL parameters)");
 })
 
-server.listen(PORT, "0.0.0.0", () => {
+server.listen(PORT, HOST, () => {
     console.log("The server is running on http://localhost:" + PORT);
 });
