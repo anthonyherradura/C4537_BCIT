@@ -15,7 +15,7 @@ const server = http.createServer(async function (req, res) {
     
 
     if (req.method === "GET" && pathname === `/COMP4537/labs/4/getDate`) {
-        const name = parsedUrl.searchParams.get("name");
+        const name = parsedUrl.searchParams.get("name") || "";
         const message = await getJsonData();
         console.log(name);
         res.writeHead(200, {
