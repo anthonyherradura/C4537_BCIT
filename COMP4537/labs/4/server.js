@@ -13,9 +13,16 @@ const server = http.createServer(async function (req, res) {
         pathname = pathname.slice(0, -1)
     }
     
-
     if (req.method === "GET" && pathname === `/COMP4537/labs/4/getDate`) {
-        const name = parsedUrl.searchParams.get("name") || "";
+        let name = parsedUrl.searchParams.get("name") || "";
+        let sum = 0;
+        if (name.includes(" ") || name.includes("+")) {
+            numbers = name.split(" ") || name.split("+");
+            numbers.forEach((number) => {
+                sum += Number(number);
+            });
+            name = sum;
+        }
         const message = await getJsonData();
         console.log(name);
         res.writeHead(200, {
