@@ -19,7 +19,8 @@ const server = http.createServer(async function (req, res) {
         const message = await getJsonData();
         console.log(name);
         res.writeHead(200, {
-            "Content-Type": "text/html"
+            "Content-Type": "text/html",
+            "Access-Control-Allow-Origin": "*"
         });
         return res.end(`<p style="color: blue;">${message.replace("%1", name) + getDate()}</p>`);
     }
